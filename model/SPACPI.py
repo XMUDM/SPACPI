@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 from feature_extract import DP_raw_fearure
-from attention import Coattention, CrossAttention
-from Embedding import Embeddings
+from model.attention import Coattention, CrossAttention
+from model.Embedding import Embeddings
 from utils.tools import parser
 import warnings
 warnings.filterwarnings("ignore")
@@ -35,7 +35,7 @@ class MLPDecoder(nn.Module):
     def forward(self, x):
         x = F.relu(self.bn1(self.feat_drop(self.fc1(x))))
         x = F.relu(self.bn2(self.feat_drop(self.fc2(x))))
-        x = self.fc4(x)
+        x = self.fc3(x)
         return x
 
 

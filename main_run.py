@@ -40,8 +40,8 @@ def run_model(args):
         print('------------------------')
 
         train_loader = dataloader(dataset_train,batch_size=args.batch_size, shuffle=True)
-        dev_loader = dataloader(dataset_train,batch_size=args.batch_size, shuffle=True)
-        test_loader = dataloader(dataset_train,batch_size=1, shuffle=False)
+        dev_loader = dataloader(dataset_dev,batch_size=args.batch_size, shuffle=True)
+        test_loader = dataloader(dataset_test,batch_size=1, shuffle=False)
 
     best_acc,best_auc,best_aupr,best_recall,best_precision = 0,0,0,0,0
     counter = 0

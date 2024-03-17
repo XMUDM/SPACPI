@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from MolecularGraphNeuralNetwork import MolecularGraphNeuralNetwork
-from ProteinCNN import ProteinCNN
+from model.MolecularGraphNeuralNetwork import MolecularGraphNeuralNetwork
+from model.ProteinCNN import ProteinCNN
 import warnings
 warnings.filterwarnings("ignore")
 from utils.tools import parser

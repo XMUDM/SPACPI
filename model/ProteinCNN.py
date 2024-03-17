@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from Embedding import Embeddings
+from model.Embedding import Embeddings
 import warnings
 warnings.filterwarnings("ignore")
 from utils.tools import parser

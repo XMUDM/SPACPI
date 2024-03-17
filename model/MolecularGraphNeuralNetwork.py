@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 import warnings
-from Embedding import Embeddings
-from LayerNorm import LayerNorm
+from model.Embedding import Embeddings
+from model.LayerNorm import LayerNorm
 warnings.filterwarnings("ignore")
 from utils.tools import parser
 args = parser()
